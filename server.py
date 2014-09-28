@@ -1,9 +1,10 @@
 from flask import Flask, request, render_template, redirect
 # from init_db import *
 from flask_sqlalchemy import SQLAlchemy
+import os
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://zqtdcdqbcofuss:1ULYi0MtfAD3hWxf13rnr7jcTM@ec2-54-204-41-249.compute-1.amazonaws.com:5432/d1mj2esi0svfkn'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 db = SQLAlchemy(app)
 
 class User(db.Model):

@@ -3,7 +3,7 @@ from flask import Flask, request, render_template, redirect
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////Users/leahdickstein/Desktop/BobaRocket/bobaorders.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://zqtdcdqbcofuss:1ULYi0MtfAD3hWxf13rnr7jcTM@ec2-54-204-41-249.compute-1.amazonaws.com:5432/d1mj2esi0svfkn'
 db = SQLAlchemy(app)
 
 class User(db.Model):

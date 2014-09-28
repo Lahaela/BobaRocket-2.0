@@ -30,10 +30,10 @@ from server1 import app, db, User
 #     get_db().commit()
 
 
-# db.create_all()
-# admin = User('admin', 'admin@example.com')
-# guest = User('guest', 'guest@example.com')
+db.create_all()
+admin = User('admin', 'admin@example.com')
+guest = User('guest', 'guest@example.com')
 
-# db.session.add(admin)
-# db.session.add(guest)
-# db.session.commit()
+db.session.add(admin)
+db.session.add(guest)
+db.session.commit()

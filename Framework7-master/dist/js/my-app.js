@@ -104,6 +104,14 @@ $$(document).on('pageInit', function (e) {
             var locmark = document.getElementById("LocationMarker");
             locmark.innerHTML = getCookie("loc");
         };
+//more Firebase stuff
+if (page.name==="arrivalorders") {
+  var dataRef = new Firebase('https://bobaorders.firebaseio.com/');
+dataRef.on('value', function(snapshot) {
+  //alert('fred’s first name is ' + snapshot.val());
+});
+}
+
 
 //Firebase
 if (page.name === "leaderboard") {
@@ -203,7 +211,7 @@ if (page.name === "leaderboard") {
   // setAwayTimeout(10000);
 }
 
-if (page.name === "orderpage") {
+if (page.name === "orderpage" || page.name === "arrivalorders"){
   var LEADERBOARD_SIZE = 20;
 
   // Create our Firebase reference
